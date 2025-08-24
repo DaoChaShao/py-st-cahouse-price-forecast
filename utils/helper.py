@@ -6,6 +6,8 @@
 # @File     :   helper.py
 # @Desc     :
 
+from pandas import DataFrame
+from plotly.express import scatter
 from time import perf_counter
 
 
@@ -42,3 +44,26 @@ class Timer(object):
             print("-" * 50)
             return f"{self._description} took {self._elapsed:.{self._precision}f} seconds."
         return f"{self._description} has NOT been started."
+
+
+def plotly_scatter(Y, y, target_col: str):
+    """ Plotly Scatter Plot with OLS Trendline
+    :param Y: Actual values
+    :param y: Predicted values
+    :param target_col: The name of the target column
+    :return: A Plotly Scatter Plot with OLS Trendline
+    """
+    df: DataFrame = DataFrame({
+        f"{target_col}": Y,
+        f"{target_col} Predicted": y
+    })
+    return scatter(
+        df,
+        x=f"{target_col}",
+        y=f"{target_col} Predicted",
+        trendline="ols",
+        trendline_color_override="red",
+        opacity=0.4,
+        labels={f"{target_col}": f"Actual Y", f"{target_col} Predicted": "Predicted y"},
+        title=f"{target_col} Actual vs Predicted"
+    )
