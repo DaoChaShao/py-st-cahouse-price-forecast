@@ -10,7 +10,7 @@ from numpy import sqrt
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 from streamlit import (empty, sidebar, subheader, session_state, selectbox,
-                       button, columns, metric, rerun)
+                       button, columns, metric, rerun, caption)
 
 from utils.helper import Timer, plotly_scatter
 
@@ -26,8 +26,8 @@ if "data" not in session_state:
     session_state["data"] = None
 if "model" not in session_state:
     session_state["model"] = None
-if "X" not in session_state:
-    session_state["X"] = None
+if "selected" not in session_state:
+    session_state["selected"] = None
 if "Y" not in session_state:
     session_state["Y"] = None
 if "y" not in session_state:
@@ -49,9 +49,13 @@ with sidebar:
         )
         cols: list[str] = [c for c in session_state.data.columns if c != option]
         col: str = selectbox(
-            "Select Target Column", cols, disabled=session_state.clicked,
+            "Select Target Column", cols,
+            index=cols.index(session_state["selected"]) if session_state["selected"] in cols else 0,
+            disabled=session_state.clicked,
             help="Select the target column for training."
         )
+        caption(f"The target col is **{col}**.")
+        session_state["selected"] = col
 
         if session_state.model is not None and session_state.Y is not None and session_state.y is not None:
             empty_messages.success(
@@ -79,12 +83,12 @@ with sidebar:
             if button("Train Model", type="primary", use_container_width=True):
                 with Timer("Training Model") as timer:
                     # Prepare the data
-                    session_state["X"] = session_state.data[[col]]
+                    X = session_state.data[[col]] * 10_000
                     session_state["Y"] = session_state.data[price]
 
                     # Train the model
                     session_state["model"] = LinearRegression()
-                    session_state["model"].fit(session_state.X, session_state.Y)
+                    session_state["model"].fit(X, session_state.Y)
                     print("Coefficients:", session_state["model"].coef_)
                     print("Intercept:", session_state["model"].intercept_)
                     empty_formula.write(
@@ -92,7 +96,7 @@ with sidebar:
                     )
 
                     # Make predictions
-                    session_state["y"] = session_state["model"].predict(session_state.X)
+                    session_state["y"] = session_state["model"].predict(X)
 
                     # Evaluate the model
                     mse = mean_squared_error(session_state.Y, session_state.y)
