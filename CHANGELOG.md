@@ -5,6 +5,8 @@
 
 ### Features
 
+- update single_train.py to improve target column selection and model training ([cb89ba8](https://github.com///commit/cb89ba8767cab24e666bbdb066bfee042941481d))
+- enhance single_predict.py with data validation and prediction functionality ([494937e](https://github.com///commit/494937e93b9495f892277dcf819ac7ab5b76ea05))
 - add single_train.py for model training interface and evaluation metrics ([1b62106](https://github.com///commit/1b62106975513eca3c7e1298b2652123009db5c3))
 - add single_predict.py for data prediction settings interface ([12cc40b](https://github.com///commit/12cc40bf5c6055a207b16048dae48e882df8d421))
 - update requirements.txt to include additional libraries for data analysis and visualization ([436f1fc](https://github.com///commit/436f1fc2f173bd0d7260e82b062aadbd80ec1162))
@@ -32,4 +34,8 @@
 - add README.md with project overview and usage instructions ([2764bca](https://github.com///commit/2764bca85a3c26fa28f08943d584d46e9add5e31))
 - add pyproject.toml for changelog configuration ([9578540](https://github.com///commit/9578540fa07be669c9453ef6fab222cd99dd6903))
 - add requirements file for project dependencies ([d49eae4](https://github.com///commit/d49eae40b7b0feb7197bb04ea3cd322ce5d0b427))
+
+### Chore
+
+- update CHANGELOG.md for version 0.1.0 release ([3781555](https://github.com///commit/378155535e3efbf46f73025def6fe3b7e18fa569))
 
