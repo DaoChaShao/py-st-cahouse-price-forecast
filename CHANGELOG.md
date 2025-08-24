@@ -5,6 +5,13 @@
 
 ### Features
 
+- add the data of California house prices from the Kaggle website ([e187202](https://github.com///commit/e18720215ca9716ef66f63445c50a63b75c9065a))
+- add Timer class for measuring code execution time ([f7b2645](https://github.com///commit/f7b2645cbb902706112012d7a482f65b32a1dbf5))
+- implement main function to configure page settings and sidebar navigation ([d9d10a2](https://github.com///commit/d9d10a272cdc904e446ff9c4bd20f1d0388d0f74))
+- enhance home.py with title and introduction expander for user guidance ([c11848b](https://github.com///commit/c11848b1d00a5e744b94b02e2252b1184629e6df))
+- update about.py to include application information and expandable section ([ab30f0a](https://github.com///commit/ab30f0a6e8a4a3ca4ea72edcc344ce25b4be0603))
+- enhance layout.py with page configuration and sidebar navigation setup ([33ef12a](https://github.com///commit/33ef12a1d392a9d323a50c7f73c874b5999b8015))
+- add CHANGELOG.md with initial version 0.1.0 and feature list ([75178ef](https://github.com///commit/75178ef95b5e0ffe9df487be722b96ef1493cd3f))
 - add house.py with initial metadata and file description ([9f287b6](https://github.com///commit/9f287b661912d6e12c2db379f14161a44e71581d))
 - add home.py with initial metadata and file description ([80f48fd](https://github.com///commit/80f48fd63d12193d2c5ff56ab7bbae487ee4d3ec))
 - add about.py with initial metadata and file description ([d41718e](https://github.com///commit/d41718e6963224966670703717b43c02b3fe5849))
