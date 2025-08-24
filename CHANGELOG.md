@@ -1,16 +1,25 @@
 <!-- insertion marker -->
 <a name="0.1.0"></a>
 
-## [0.1.0](https://github.com///compare/f0cd8c66f72d618e49fbce6902965f000a44af38...0.1.0) (2025-08-24)
+## [0.1.0](https://github.com///compare/f0cd8c66f72d618e49fbce6902965f000a44af38...0.1.0) (2025-08-25)
 
 ### Features
 
+- add single_train.py for model training interface and evaluation metrics ([1b62106](https://github.com///commit/1b62106975513eca3c7e1298b2652123009db5c3))
+- add single_predict.py for data prediction settings interface ([12cc40b](https://github.com///commit/12cc40bf5c6055a207b16048dae48e882df8d421))
+- update requirements.txt to include additional libraries for data analysis and visualization ([436f1fc](https://github.com///commit/436f1fc2f173bd0d7260e82b062aadbd80ec1162))
+- add multi_train.py with main function template ([661b861](https://github.com///commit/661b86160231a1258f19d62862e627a1a3313cb7))
+- add multi_predict.py with main function template ([6dea6a9](https://github.com///commit/6dea6a9fc09283f08d07365174fa6ccb39e63836))
+- update layout.py with new page structure and titles for prediction features ([37c0d3a](https://github.com///commit/37c0d3a9612b402072ee44fcbeb931324012ecde))
+- enhance home.py with data management features and chart loading functionality ([9c7c4ac](https://github.com///commit/9c7c4accf63063b880b07f0bd34476bad08fd588))
+- add plotly_scatter function for creating scatter plots with OLS trendline ([3bd3ca0](https://github.com///commit/3bd3ca03bf730bacea277dbba0d00e9a19c9c565))
+- rename house_data.csv to ca_house_prices.csv for clarity ([635bb7b](https://github.com///commit/635bb7be3b6db92074a71df5a833207110a0abff))
+- enhance layout.py with page configuration and sidebar navigation setup ([197d035](https://github.com///commit/197d0350d0be2319e89d7fffb3596d9e0493d91f))
 - add the data of California house prices from the Kaggle website ([e187202](https://github.com///commit/e18720215ca9716ef66f63445c50a63b75c9065a))
 - add Timer class for measuring code execution time ([f7b2645](https://github.com///commit/f7b2645cbb902706112012d7a482f65b32a1dbf5))
 - implement main function to configure page settings and sidebar navigation ([d9d10a2](https://github.com///commit/d9d10a272cdc904e446ff9c4bd20f1d0388d0f74))
 - enhance home.py with title and introduction expander for user guidance ([c11848b](https://github.com///commit/c11848b1d00a5e744b94b02e2252b1184629e6df))
 - update about.py to include application information and expandable section ([ab30f0a](https://github.com///commit/ab30f0a6e8a4a3ca4ea72edcc344ce25b4be0603))
-- enhance layout.py with page configuration and sidebar navigation setup ([33ef12a](https://github.com///commit/33ef12a1d392a9d323a50c7f73c874b5999b8015))
 - add CHANGELOG.md with initial version 0.1.0 and feature list ([75178ef](https://github.com///commit/75178ef95b5e0ffe9df487be722b96ef1493cd3f))
 - add house.py with initial metadata and file description ([9f287b6](https://github.com///commit/9f287b661912d6e12c2db379f14161a44e71581d))
 - add home.py with initial metadata and file description ([80f48fd](https://github.com///commit/80f48fd63d12193d2c5ff56ab7bbae487ee4d3ec))
