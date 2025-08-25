@@ -5,6 +5,10 @@
 
 ### Features
 
+- add price selection to session state and update model training logic in single_train.py ([80f4172](https://github.com///commit/80f4172c0ed887909dac30f50d86f9f9a0331ff8))
+- enhance prediction logic and error handling in single_predict.py ([de1aa75](https://github.com///commit/de1aa75ed9bd55a20645d54507b6c9aa823ee376))
+- implement multi-variable training functionality in multi_train.py ([b9e80f5](https://github.com///commit/b9e80f500e08a0a85e8acc0148bc5182be6001bc))
+- update layout to include multi-variable training and prediction pages ([8d1a94e](https://github.com///commit/8d1a94e57bce99024107f0bdec1650726bf43902))
 - add model saving functionality and improve data handling in single_train.py ([cf31371](https://github.com///commit/cf313716d0d02dc4e2805fe6c74f7eddee179be7))
 - adjust prediction value display for median income in single_predict.py ([374b560](https://github.com///commit/374b560c7a3a4b2b4db11f1db6c76cb4b4b056a7))
 - add model saving and loading functions to helper.py ([90934fd](https://github.com///commit/90934fd1c75df56e3584193d59a7addced5fce71))
@@ -40,6 +44,7 @@
 
 ### Chore
 
+- update CHANGELOG.md to include recent feature additions and improvements ([bad7d37](https://github.com///commit/bad7d37d89d724c67aeddeba77204d41ccffc37f))
 - update CHANGELOG.md to reflect recent feature additions and improvements ([a5bdc19](https://github.com///commit/a5bdc19ed0722edcadcc0b333892ff1012dfd062))
 - update CHANGELOG.md for version 0.1.0 release ([3781555](https://github.com///commit/378155535e3efbf46f73025def6fe3b7e18fa569))
 
