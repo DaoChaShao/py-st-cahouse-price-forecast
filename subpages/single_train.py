@@ -35,6 +35,8 @@ if "y" not in session_state:
     session_state["y"] = None
 if "clicked" not in session_state:
     session_state["clicked"] = False
+if "price" not in session_state:
+    session_state["price"] = ""
 
 with sidebar:
     subheader("Data Training Settings")
@@ -44,7 +46,7 @@ with sidebar:
     else:
 
         option: str = "median_house_value"
-        price: str = selectbox(
+        session_state["price"]: str = selectbox(
             "Select Price Column", [option],
             help="Select the price column for training.", index=0, disabled=True
         )
@@ -78,7 +80,7 @@ with sidebar:
             empty_chart.plotly_chart(
                 plotly_scatter(session_state.Y, session_state.y, col), use_container_width=True
             )
-            model_path: str = f"Model between {col} and {price}.joblib"
+            model_path: str = f"Model between {col} and {session_state.price}.joblib"
             if path.exists(model_path):
                 empty_messages.success(f"The model has been saved as **{model_path}**.")
             else:
@@ -92,7 +94,7 @@ with sidebar:
                 with Timer("Training Model") as timer:
                     # Prepare the data
                     X = session_state.data[[col]]
-                    session_state["Y"] = session_state.data[price]
+                    session_state["Y"] = session_state.data[session_state.price]
 
                     # Train the model
                     session_state["model"] = LinearRegression()
