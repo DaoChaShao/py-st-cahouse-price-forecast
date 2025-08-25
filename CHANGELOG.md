@@ -5,6 +5,9 @@
 
 ### Features
 
+- update subheader for clarity in house price prediction settings in single_predict.py ([90506e8](https://github.com///commit/90506e8d91139adecb5f8c68029af90ab4ff422e))
+- enhance multi-variable training logic and session state management in multi_train.py ([03b443e](https://github.com///commit/03b443e751af0cca0dfc28dbd26afc00f440767e))
+- implement sidebar notifications for house price prediction settings in multi_predict.py ([9b5d2e8](https://github.com///commit/9b5d2e85386f68b056cf99b89c47fa433d201d5b))
 - improve variable selection validation and enhance model training feedback in multi_train.py ([ab42cad](https://github.com///commit/ab42cad6a98172900dc9e84eb9602461b4fd8c9f))
 - add price selection to session state and update model training logic in single_train.py ([80f4172](https://github.com///commit/80f4172c0ed887909dac30f50d86f9f9a0331ff8))
 - enhance prediction logic and error handling in single_predict.py ([de1aa75](https://github.com///commit/de1aa75ed9bd55a20645d54507b6c9aa823ee376))
@@ -45,6 +48,7 @@
 
 ### Chore
 
+- update CHANGELOG.md to include recent feature improvements ([8634295](https://github.com///commit/8634295d848d8e8d64370533100e2a237b638a83))
 - update CHANGELOG.md to reflect recent feature additions and improvements ([0e58ee1](https://github.com///commit/0e58ee13491e336c5a69a9117e1c4e1a7f296f25))
 - update CHANGELOG.md to include recent feature additions and improvements ([bad7d37](https://github.com///commit/bad7d37d89d724c67aeddeba77204d41ccffc37f))
 - update CHANGELOG.md for version 0.1.0 release ([3781555](https://github.com///commit/378155535e3efbf46f73025def6fe3b7e18fa569))
