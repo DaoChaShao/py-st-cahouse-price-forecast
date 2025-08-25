@@ -12,6 +12,8 @@ from streamlit import (empty, sidebar, subheader, session_state, slider,
 
 from utils.helper import Timer
 
+INCOME_FACTOR: int = 10_000
+
 empty_messages: empty = empty()
 empty_metrics: empty = empty()
 
@@ -30,17 +32,20 @@ with sidebar:
     else:
         empty_messages.info("Model and Data loaded successfully. You can make predictions now.")
         # print(session_state.data)
-        X = session_state.data[[session_state.selected]] * 10_000
+        X = session_state.data[[session_state.selected]]
 
         col_value: float = slider(
-            "Select Feature Value",
+            f"{session_state.selected}",
             min_value=float(X[session_state.selected].min()),
             max_value=float(X[session_state.selected].max()),
             value=float(X[session_state.selected].mean()),
             step=(float(X[session_state.selected].max()) - float(X[session_state.selected].min())) / len(X),
             help="Select the feature value for prediction."
         )
-        caption(f"The value of the column is {col_value:.2f}")
+        if session_state.selected == "median_income":
+            caption(f"The value of the column is {col_value * INCOME_FACTOR:.2f}")
+        else:
+            caption(f"The value of the column is {col_value:.2f}")
 
         if button("Predict", type="primary", use_container_width=True):
             with Timer("Predict the House Price") as timer:
