@@ -30,20 +30,24 @@ def pages_setter() -> None:
             "subpages/home.py",
             "subpages/single_train.py",
             "subpages/single_predict.py",
+            "subpages/multi_train.py",
+            "subpages/multi_predict.py",
             "subpages/about.py",
         ],
         "title": [
             "Home",
-            "House Price Prediction Train",
+            "House Price Train with a Single Variable",
             "House Price Prediction with a Single Variable",
+            "House Price Train with Multiple Variables",
+            "House Price Prediction with Multiple Variables",
             "About",
         ],
         "icon": [
             ":material/home:",
             ":material/train:",
             ":material/check:",
-            # ":material/commute:"
-            # ":material/done_all:",
+            ":material/commute:",
+            ":material/done_all:",
             ":material/info:",
         ],
     }
@@ -55,9 +59,11 @@ def pages_setter() -> None:
         "Core Functions": [
             Page(page=pages["page"][1], title=pages["title"][1], icon=pages["icon"][1]),
             Page(page=pages["page"][2], title=pages["title"][2], icon=pages["icon"][2]),
+            Page(page=pages["page"][3], title=pages["title"][3], icon=pages["icon"][3]),
+            Page(page=pages["page"][4], title=pages["title"][4], icon=pages["icon"][4]),
         ],
         "Information": [
-            Page(page=pages["page"][3], title=pages["title"][3], icon=pages["icon"][3]),
+            Page(page=pages["page"][5], title=pages["title"][5], icon=pages["icon"][5]),
         ],
     }
     pg = navigation(structure, position="sidebar", expanded=True)
