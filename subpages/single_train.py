@@ -7,12 +7,13 @@
 # @Desc     :
 
 from numpy import sqrt
+from os import path
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 from streamlit import (empty, sidebar, subheader, session_state, selectbox,
                        button, columns, metric, rerun, caption)
 
-from utils.helper import Timer, plotly_scatter
+from utils.helper import Timer, plotly_scatter, model_saver
 
 MSE: float = 0.0
 R2: float = 1.0
@@ -77,13 +78,20 @@ with sidebar:
             empty_chart.plotly_chart(
                 plotly_scatter(session_state.Y, session_state.y, col), use_container_width=True
             )
+            model_path: str = f"Model between {col} and {price}.joblib"
+            if path.exists(model_path):
+                empty_messages.success(f"The model has been saved as **{model_path}**.")
+            else:
+                if button("Save Model", type="primary", use_container_width=True):
+                    model_saver(session_state.model, model_path)
+                    rerun()
         else:
             empty_messages.info("Data uploaded successfully! Please select a target column to proceed with training.")
 
             if button("Train Model", type="primary", use_container_width=True):
                 with Timer("Training Model") as timer:
                     # Prepare the data
-                    X = session_state.data[[col]] * 10_000
+                    X = session_state.data[[col]]
                     session_state["Y"] = session_state.data[price]
 
                     # Train the model
