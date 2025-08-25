@@ -5,6 +5,9 @@
 
 ### Features
 
+- add model saving functionality and improve data handling in single_train.py ([cf31371](https://github.com///commit/cf313716d0d02dc4e2805fe6c74f7eddee179be7))
+- adjust prediction value display for median income in single_predict.py ([374b560](https://github.com///commit/374b560c7a3a4b2b4db11f1db6c76cb4b4b056a7))
+- add model saving and loading functions to helper.py ([90934fd](https://github.com///commit/90934fd1c75df56e3584193d59a7addced5fce71))
 - update single_train.py to improve target column selection and model training ([cb89ba8](https://github.com///commit/cb89ba8767cab24e666bbdb066bfee042941481d))
 - enhance single_predict.py with data validation and prediction functionality ([494937e](https://github.com///commit/494937e93b9495f892277dcf819ac7ab5b76ea05))
 - add single_train.py for model training interface and evaluation metrics ([1b62106](https://github.com///commit/1b62106975513eca3c7e1298b2652123009db5c3))
@@ -37,5 +40,6 @@
 
 ### Chore
 
+- update CHANGELOG.md to reflect recent feature additions and improvements ([a5bdc19](https://github.com///commit/a5bdc19ed0722edcadcc0b333892ff1012dfd062))
 - update CHANGELOG.md for version 0.1.0 release ([3781555](https://github.com///commit/378155535e3efbf46f73025def6fe3b7e18fa569))
 
