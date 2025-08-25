@@ -6,6 +6,7 @@
 # @File     :   helper.py
 # @Desc     :
 
+from joblib import dump, load
 from pandas import DataFrame
 from plotly.express import scatter
 from time import perf_counter
@@ -67,3 +68,22 @@ def plotly_scatter(Y, y, target_col: str):
         labels={f"{target_col}": f"Actual Y", f"{target_col} Predicted": "Predicted y"},
         title=f"{target_col} Actual vs Predicted"
     )
+
+
+def model_saver(model, filename: str) -> None:
+    """ Save the model to a file
+    :param model: The model to be saved
+    :param filename: The name of the file to save the model to
+    """
+    dump(model, filename)
+    print(f"The model {filename} has been saved successfully.")
+
+
+def model_loader(filename: str):
+    """ Load the model from a file
+    :param filename: The name of the file to load the model from
+    :return: The loaded model
+    """
+    model = load(filename)
+    print(f"The model {filename} has been loaded successfully.")
+    return model
