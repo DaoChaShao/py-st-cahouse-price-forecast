@@ -5,6 +5,9 @@
 
 ### Features
 
+- enhance Chinese README.md with detailed features for data management, visualization, and model training ([cbf2f54](https://github.com///commit/cbf2f540b69d35925764efd501b0d68e1ff21f2a))
+- update README.md to enhance application description and detail features for house price prediction ([90a2bca](https://github.com///commit/90a2bca399de50fc5b1a6d21e67b9dc68fe0a509))
+- enhance application description in about.py with detailed features and capabilities ([ac6970c](https://github.com///commit/ac6970c58dee73b049e78e88d2aa9c3f9989a2f3))
 - refine multi-variable training logic and improve session state handling in multi_train.py ([adf602d](https://github.com///commit/adf602dc6f2652161c92becfce8b9e9078ced0b7))
 - add slider for variable selection and prediction button in house price prediction settings ([23d9b6d](https://github.com///commit/23d9b6d18358b52f2ed272e133a145311cf82673))
 - update subheader for clarity in house price prediction settings in single_predict.py ([90506e8](https://github.com///commit/90506e8d91139adecb5f8c68029af90ab4ff422e))
@@ -50,8 +53,8 @@
 
 ### Chore
 
+- update CHANGELOG.md to include recent feature additions and improvements ([ed2b4e4](https://github.com///commit/ed2b4e4426aa0f1205983b1528797b5e9af65545))
 - update CHANGELOG.md to reflect recent feature additions and improvements ([165f32f](https://github.com///commit/165f32f7db39a5087b5ec6484f3fd9bf31d0715e))
 - update CHANGELOG.md to include recent feature improvements ([8634295](https://github.com///commit/8634295d848d8e8d64370533100e2a237b638a83))
-- update CHANGELOG.md to include recent feature additions and improvements ([bad7d37](https://github.com///commit/bad7d37d89d724c67aeddeba77204d41ccffc37f))
 - update CHANGELOG.md for version 0.1.0 release ([3781555](https://github.com///commit/378155535e3efbf46f73025def6fe3b7e18fa569))
 
