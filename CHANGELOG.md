@@ -5,6 +5,7 @@
 
 ### Features
 
+- improve variable selection validation and enhance model training feedback in multi_train.py ([ab42cad](https://github.com///commit/ab42cad6a98172900dc9e84eb9602461b4fd8c9f))
 - add price selection to session state and update model training logic in single_train.py ([80f4172](https://github.com///commit/80f4172c0ed887909dac30f50d86f9f9a0331ff8))
 - enhance prediction logic and error handling in single_predict.py ([de1aa75](https://github.com///commit/de1aa75ed9bd55a20645d54507b6c9aa823ee376))
 - implement multi-variable training functionality in multi_train.py ([b9e80f5](https://github.com///commit/b9e80f500e08a0a85e8acc0148bc5182be6001bc))
@@ -44,7 +45,7 @@
 
 ### Chore
 
+- update CHANGELOG.md to reflect recent feature additions and improvements ([0e58ee1](https://github.com///commit/0e58ee13491e336c5a69a9117e1c4e1a7f296f25))
 - update CHANGELOG.md to include recent feature additions and improvements ([bad7d37](https://github.com///commit/bad7d37d89d724c67aeddeba77204d41ccffc37f))
-- update CHANGELOG.md to reflect recent feature additions and improvements ([a5bdc19](https://github.com///commit/a5bdc19ed0722edcadcc0b333892ff1012dfd062))
 - update CHANGELOG.md for version 0.1.0 release ([3781555](https://github.com///commit/378155535e3efbf46f73025def6fe3b7e18fa569))
 
