@@ -23,8 +23,6 @@ empty_table: empty = empty()
 
 if "data" not in session_state:
     session_state["data"] = None
-# if "price" not in session_state:
-#     session_state["price"] = ""
 if "model_multi" not in session_state:
     session_state["model_multi"] = None
 if "Y_multi" not in session_state:
@@ -51,7 +49,7 @@ with sidebar:
         multi: list[str] = multiselect(
             "Select variables for X",
             multi_options,
-            default=[col for col in session_state["selected_multi"] if col in multi_options] if session_state["selected_multi"] else [],
+            default=session_state.get("selected_multi", []),
             disabled=session_state["clicked_multi"],
             help="Select the target variables for training with multiple variables.",
         )
@@ -59,7 +57,7 @@ with sidebar:
         if not multi:
             empty_messages.warning("Please select at least one variable for training.")
         else:
-            X_multi: DataFrame = session_state["data"].drop([price], axis=1)
+            X_multi: DataFrame = session_state["data"][multi]
             empty_table.data_editor(X_multi[multi], hide_index=True, disabled=True, use_container_width=True)
 
             if session_state["model_multi"] is not None:
@@ -106,5 +104,6 @@ with sidebar:
                                 use_container_width=True
                             )
                         empty_messages.success(f"Model trained successfully! {timer}")
+                        print("训练用的列:", session_state["model_multi"].feature_names_in_)
                         session_state["clicked_multi"] = True
                         rerun()
