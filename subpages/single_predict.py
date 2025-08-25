@@ -25,7 +25,7 @@ if "selected" not in session_state:
     session_state["selected"] = None
 
 with sidebar:
-    subheader("Data Prediction Settings")
+    subheader("House Price Prediction Settings")
 
     if session_state.data is None:
         empty_messages.error("Please train the model on the **House Price Prediction Train** page first.")
